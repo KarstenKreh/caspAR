@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #121212;
+}
+
+.stroke {
+  position: absolute;
+  width: 500px;
+  height: auto;
+}
+
+.filled {
+  position: absolute;
+  width: 500px;
+  height: auto;
+}

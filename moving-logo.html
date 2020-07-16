@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CaspAR-Logo</title>
+<link rel="stylesheet" href="moving-logo.css">
+</head>
+
+<body>
+
+
+    <div id="stroke" class="stroke">
+            <img src="logo-stroke.svg" alt="Logo">
+        </div>
+
+        <div id="filled" class="filled">
+            <img src="logo-filled.svg" alt="Logo">
+    </div>
+
+<script type="text/javascript">
+    var stroke = document.getElementById("stroke");
+    var filled = document.getElementById("filled");
+
+    document.onmousemove = function(){
+      translate (stroke,60,60);
+      translate (filled,40,40);
+
+        function translate(text,xf,yf) {
+
+              var y = (event.clientY - (window.innerHeight / 2)) / window.innerHeight * yf + "px";
+              var x = (event.clientX - (window.innerWidth / 2)) / window.innerWidth * xf + "px";
+
+              text.style.transform = "translate("+x+","+y+")";
+        }
+    }
+</script>
+
+</body>
+
+</html>
